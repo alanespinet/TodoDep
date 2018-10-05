@@ -1,0 +1,77 @@
+.todos-list {
+  margin-top: 3rem;
+  margin-bottom: 10rem;
+
+  ul {
+    list-style-type: none;
+    height: 30rem;
+    overflow-y: auto;
+    background-color: $white;
+    border: 1px solid rgba(0, 128, 128, 0.5);
+
+    li {
+      padding: 1rem;
+      transition: all .3s ease;
+      border-bottom: 1px solid rgba($teal, .2);
+
+      .single-todo {
+        @include flex-fs-c;
+
+        &__completed-input {
+          font-size: 7.2rem;
+          margin-right: 20px;
+        }
+
+        &__completed-text {
+          color: $teal;
+          font-weight: 300;
+          margin-left: 20px;
+
+          @include responsive-phone {
+            display: none;
+          }
+        }
+      }
+
+      &.completed {
+        .single-todo p {
+          color: $teal;
+          font-style: italic;
+        }
+      }
+
+      button {
+        @include default-radius;
+        height: 45px;
+        border: none;
+        background-color: $red;
+        width: 100px;
+        color: $white;
+        font-weight: 300;
+        font-size: $sm-size;
+        transition: all .3s ease;
+        margin-left: auto;
+        opacity: 0;
+
+        &:hover {
+          background-color: $dark-gray;
+          cursor: pointer;
+        }
+      }
+
+      &:hover {
+        background-color: rgba( $light-gray, .8 );
+
+        button {
+          opacity: 1;
+        }
+      }
+    }
+
+    p {
+      font-weight: 300;
+      font-size: $md-size;
+    }
+  }
+
+}

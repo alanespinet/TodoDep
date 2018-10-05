@@ -1,0 +1,15 @@
+@import './base/variables';
+
+@import './mixins/Layout';
+@import './mixins/Responsive';
+
+@import './base/settings';
+@import './base/base';
+
+@import './components/Header';
+@import './components/Footer';
+@import './components/Counter';
+@import './components/AddForm';
+@import './components/TodosList';
+
+@import './animations/_TodosList.scss';
